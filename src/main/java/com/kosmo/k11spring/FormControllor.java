@@ -96,7 +96,7 @@ public class FormControllor {
 	
 	/*
 	폼값받기3]커멘드객체를 이용해서 폼값 한번에 받기
-	조건1) 쿼리스트링으로 전달되는 파라미터의 갯수와 폼값을 저장할 객체(DTO또는 VO의 멤버변수의
+	조건1) 쿼리스트링으로 전달되는 파라미터의 갯수와 폼값을 저장할 객체(DTO또는 VO)의 멤버변수의
 		갯수가 동일할때 사용가능함)
 	조건2) 커멘드객체를 사용할때는 클래스명 앞글자를 소문자로 바꾼 형태의 매개변수를
 		사용해야한다.(규칙이다)
@@ -113,7 +113,8 @@ public class FormControllor {
 	 */
 	@RequestMapping("/form/commandObjGet.do")
 	public String commandObjGet(MemberDTO memberDTO) {
-		
+		//commandObjGet 함수명을 변경해도 상관없었다
+		//memberDTO => emberDTO로 변경시 문제 없이 작동했다. 
 		
 		return "01Form/commandObjGet";
 	}
@@ -122,13 +123,13 @@ public class FormControllor {
 	/*
 	폼값받기4] PathVariable 어노테이션으로 폼값받기
 		요청명 ./form 뒤에 붙은 값이 메소드에서 사용가능한 파라미터가 된다.
-		아래의 경우 2개의 ㅓ파라미터를 받아서 사용하게 된다.
+		아래의 경우 2개의 파라미터를 받아서 사용하게 된다.
 		단 웹브라우저는 요청명을 경로로 인식하므로 리소스(이미지 등)를 
 		사용할 때는 경로에 주의해야한다.
-		파라미터의 객수가 틀릴경우 404에러가 뜬다.
+		파라미터의 갯수가 틀릴경우 404에러가 뜬다.
 		
 		
-		컨테스트루트 바로하위에 resources폴더가 있다라고 가정을하면 이해하기 슆다
+		컨텍스트루트 바로하위에 resources폴더가 있다라고 가정을하면 이해하기 쉽다
 	 */
 	
 	@RequestMapping("/form/{memberId}/{memberName}")

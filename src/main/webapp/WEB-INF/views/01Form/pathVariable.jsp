@@ -33,16 +33,22 @@
 	
 	
 	<!--
-	http://localhost:8081/k11spring/form/gildong99/코스모
+	주소창 :	http://localhost:8081/k11spring/form/		gildong99/	코스모
+			http://localhost:8081/k11spring/1번째뎁스/	2번째뎁스/	3번째뎁스
+								  k11spring/webapp/		resources/	4.png		
 	브라우저입장에서는 파라미터가 아닌 2뎁스안쪽의 경로이다.
-	웹브라우저는 /로 구분되는 요청명을 디렉토리(경로)로 인식하므로
+	웹브라우저는 /로 구분되는 요청명을 디렉토리(경로)로 인식한다.
+	요청명을 다시 보면 :  ./form/gildong/코스모   이다.
 	현재 "./form/gildong/길동 과 같은 요청명은 ../를 경로에 추가하여 상위디렉토리로 이동해야한다.
 	-->
 	<div class="row mt-5" >
 		<h3>이미지경로 확인</h3>
 		<!-- 출력안됨 -->
-		<img src="../images/4.png" alt="개" />
-		<img src="../../images/4.png" alt="개" />
+		<img src="../images/4.png" alt="개1" />
+		
+		
+		
+		<img src="../../images/4.png" alt="개2" />
 	</div>
 	
 	
