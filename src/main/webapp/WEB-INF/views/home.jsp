@@ -38,10 +38,11 @@
 			첫번째 컨트롤러 바로가기
 			</a>
 		</li>
-	</ul>
 	
 	
-	<!--  -->
+	
+	
+	<!--컨트롤러 : FormControllor.java  --> 
 	<h3>form값 차리하기</h3>
 	<li>
 		<a href="./form/servletRequest?id=kosmo&pw=1234" target="_blank">
@@ -57,7 +58,7 @@
 		</a>
 	</li>
 	
-	
+
 	
 	<li>
 		<a href="./form/commandObjGet.do?id=kosmo&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
@@ -73,6 +74,7 @@
 		</a>
 	</li>
 	
+	<br />
 	
 	<!--컨트롤러 : RequestMappingControllor.java  -->
 	<h3>@RequestMapping 어노테이션 활용</h3>
@@ -83,6 +85,22 @@
 	</li>
 	
 	
+	<hr />
+	
+	
+	<!--컨트롤러 : ValidateController.java  -->
+	<h2>폼 데이터 검증하기 - Validator</h2>
+	<li>
+		<a href="validate/memberRegist.do" target="_blank">회원가입</a>
+	</li>
+	
+	
+	
+	
+	
+	<!-- 컨트롤러: DIController.java -->
+	<h3>DI(Dependency Injection)  의존성주입</h3>
+	<il><a href="di/myCalculator" target="_blank">간단한 사칙연산 계산기</a></il>
 	
 	
 	
@@ -91,13 +109,8 @@
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
+	</ul>
+	<br /><br />
 </div>
 </body>
 </html>

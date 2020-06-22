@@ -67,10 +67,59 @@
 	</form>
 
 	
+	<hr />
 	
 	
+	<h3>@ModelAttribute 어노테이션 사용하여 커맨드객체 이름 변경하기</h3>
+	<script>
+		var stuCheck = function(){}
+	</script>
 	
-	
+	<%
+	//로컬실행과 배포를 하는 경우와 같이 루트가 변경되는경우 수정하는 수고를 예방할 수 있다.
+	String ctxPath = request.getContextPath(); 
+	%>
+	<form action="<%=ctxPath%>/requestMapping/modelAttribute" 
+		method="post" name="studentFrm"
+		onsubmit="return stuCheck();">
+		<table class="table table-bordered" style="width: 400px;">
+			<tr>
+				<td>이름</td>
+				<td>
+					<input type="text" name="name" />
+				</td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td>
+					<input type="text" name="age" />
+				</td>
+			</tr>
+			<tr>
+				<td>학년</td>
+				<td>
+					<select name="gradeNum" >
+						<option value="1학년">1학년</option>
+						<option value="2학년">2학년</option>
+						<option value="3학년">3학년</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>학반</td>
+				<td>
+					<input type="radio" name="classNum"  value="1반"/>1반
+					<input type="radio" name="classNum"  value="2반"/>2반
+					<input type="radio" name="classNum"  value="3반"/>3반
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="text-center">
+					<button type="submit">전송하기</button>
+				</td>
+			</tr>
+		</table>
+	</form>
 	
 	
 	

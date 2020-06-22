@@ -102,7 +102,6 @@ public class FormControllor {
 		사용해야한다.(규칙이다)
 	조건3) 커맨드객체를 만들때 파라미터의 갯수는 달라도 상관없으나 파라미터의 이름과 멤버변수의 이름을 반드시 동일
 		하게 해야하고 이에 해당하는 getter/ setter 가 생성되어야 한다. 
-	
 	***커맨드객체의 이름을 변경해서 View로 전달하고 싶다면 
 	@ModelAttribute 어노테이션을 사용하면된다. (뒤에서 학습예정)
 	 
@@ -142,6 +141,12 @@ public class FormControllor {
 		
 		return "01Form/pathVariable";
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	
