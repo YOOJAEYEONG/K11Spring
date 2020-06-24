@@ -48,8 +48,49 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!--
+	파일 업로드를 위한 빈 생성  
+	class 값은 
+	Maven Dependencies => spring-web-4.3.27.RELEASE.jar => org.springframework.web.multipart.commons => 
+    CommonsMultipartResolver.class 에서  copy qualified name으로 클래스에 붙이기
+	-->
+	<beans:bean id="multipartResolver" 
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name = "maxUploadSize" value="1000000"/>
+	</beans:bean>
+	<!--파일 다운로드를 위한 빈 생성   -->
+	<beans:bean id="fileDownloadView" class="common.FileDownLoadView"/>
+	<beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<beans:property name="order" value="0"/>
+	</beans:bean>
 	
 	
 	
 	
 </beans:beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

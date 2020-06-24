@@ -23,19 +23,17 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>DI를 활용한 어벤져스히어로</h2>
+	<h3>생성자를 사용하여 빈 생성하기</h3>
 	
 	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
-	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
-	</ul>
+	<h4>캡틴아메리카 정보</h4>
+	<li>${captainAmerica }</li>
+	<h4>아이언맨 정보</h4>
+	<li>${ironMan }</li>
+	
+	
+	
 </div>
 </body>
 </html>

@@ -23,19 +23,19 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>파일업로드 결과보기</h2>
+	<a href="./uploadForm.do">파일업로드 폼바로가기</a>
 	
+	<c:forEach begin="0" end="${returnObj.files.size()-1 }" var="i">
+		<ul>
+			<li>제목${i+1 } : ${returnObj.files[i].title }</li>
+			<li>원본파일명${i+1 } : ${returnObj.files[i].originalName }</li>
+			<li>저장된파일명${i+1 } : ${returnObj.files[i].saveFileName }</li>
+			<li>전체경로${i+1 } : ${returnObj.files[i].serverFullName }</li>
+			<li><img src="../images/upload/${returnObj.files[i].saveFileName }" width="200"/></li>
+		</ul>
+	</c:forEach>
 	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
-	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
-	</ul>
 </div>
 </body>
 </html>

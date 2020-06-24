@@ -10,35 +10,17 @@ Validator
 	유효성검증을 위한 클래스정의를 위해 Validator 인터페이스를 구현한다.
 	차후 supports(), validate() 두개의 메소드를 오버라이딩 해야한다.
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
 public class MemberValidator implements Validator{
 
-	
-	
 	/*
 	supports() 메소드
 		: 매개변수로 전달되는 객체가 유효성 검증을 지원할 수 있는 커맨드객체인지 여부를 판단한다.
 		만약 해당 메소드를 통과하지 못하면 유효성 검증을 진행하는 validate()메소드는
-		호출되지 않는다.
-		호출하는 부분이 없지만 자동 호출된다.
-	 */
+		호출되지 않는다. 호출하는 부분이 없지만 자동 호출된다.
+	*/
 	@Override
 	public boolean supports(Class<?> clazz) {
-		/*
-		isAssignableFrom(): 커맨드객체가 아닐경우 false를 반환
-		 */
+		//isAssignableFrom(): 커맨드객체가 아닐경우 false를 반환
 		return MemberDTO.class.isAssignableFrom(clazz);
 	}
 	
@@ -49,14 +31,12 @@ public class MemberValidator implements Validator{
 		실제 폼값에 대한 검증을 진행한다.
 		매개변수1 : 폼값을 저장한 커맨드객체
 		매개변수2 : 에러정보를 저장할 Errors타입의 변수
-
-	 */
+	*/
 	@Override
 	public void validate(Object obj, Errors errors) {
 		
 		System.out.println("validate() 메소드 호출됨");
 		MemberDTO memberDTO = (MemberDTO)obj;
-		
 		
 		//단순if문을 통한 검증 : 아이디
 		String member_id = memberDTO.getId();

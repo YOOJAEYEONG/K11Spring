@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>05Environment/main1</title>
 
 <!--jquery와 부트스트랩 CDN 추가함 -->
 <!-- Latest compiled and minified CSS -->
@@ -23,19 +23,22 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>Environment객체를 이용한 외부파일 사용하기</h2>
 	
-	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
+	<h3>Environment.properties 파이러에서 읽어온 Oracle의 kosmo계정 정보</h3>
 	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
+		<li>아이디: ${adminID }</li>
+		<li>패스워드:${adminPW }</li>
 	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </div>
 </body>
 </html>

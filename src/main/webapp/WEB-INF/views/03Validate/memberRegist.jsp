@@ -25,8 +25,20 @@
 <div class="container">
 	<h2>Validator 인터페이스를 구현한 폼값 검증</h2>
 	
+	
+	
+	
+	
+	
+	
 	<!--Validator를 통해 폼값 검증 후 에러가 있는 경우 출력  -->
 	<span style="color: red;font-size: 1.5em;">${formError }</span>
+	
+	
+	
+	
+	
+	
 	
 	<script>
 		function registCheck(){

@@ -23,18 +23,18 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>upload폴더의 파일목록 보기</h2>
 	
-	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
 	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
+		<c:forEach items="${fileMap }" var="file" varStatus="vs">
+			<li>
+				파일명 : ${file.key }&nbsp;&nbsp;
+				파일크기 : ${file.value }Kb&emsp;
+				<a href="download.do?fileName=${file.key }&oriFileName=임시파일명${vs.count }.jpg">다운로드</a>
+			</li>
+		</c:forEach>
+		<!-- 다운로드시 원본파일명으로 변경하려면 기존 파일명을 DB에 저장해야하므로, 
+		여기서는 임시로 파일명을 지정했다. -->
 	</ul>
 </div>
 </body>

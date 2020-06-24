@@ -23,19 +23,32 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>어노테이션을 통해 JAVA파일에서 DI 사용하기</h2>
 	
 	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
 	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
+		<li>홍길동 회원님 정보: </li>
+		<li>${memberInfo1 }</li>
 	</ul>
+	<ul>
+		<li>본인이름 회원님의 정보</li>
+		<li>${memberInfo2 }</li>
+	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </div>
 </body>
 </html>

@@ -16,7 +16,6 @@ public class ValidateController {
 	//@RequestMapping("/validate/memberRegist")		//둘다됨
 	@RequestMapping("/validate/memberRegist.do")	//둘다됨
 	public String memberRegist() {
-		
 		return "03Validate/memberRegist";
 	}
 	
@@ -40,7 +39,7 @@ public class ValidateController {
 		전송된 폼값을 저장한 커맨드객체를 통해 폼값의 유효성 체크를 실시한다.
 		매개변수로 유효성체크를 할 커맨드객체와 바인딩결과(검증결과)를 
 		저장할 객체를 전달한다. 
-		 */
+		*/
 		MemberValidator validator = new MemberValidator();
 		validator.validate(memberDTO, result);
 		

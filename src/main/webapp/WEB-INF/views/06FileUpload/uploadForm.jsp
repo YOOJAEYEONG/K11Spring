@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>uploadForm</title>
 
 <!--jquery와 부트스트랩 CDN 추가함 -->
 <!-- Latest compiled and minified CSS -->
@@ -23,19 +23,43 @@
 </head>
 <body>
 <div class="container">
-	<h2>VAlidator 인터페이스를 구현한 폼값 검증</h2>
-	<h3>유효성 검증 성공 - 회원가입 완료</h3>
+	<h2>파일업로드폼</h2>
+	<form name="fileFrm" method="post" 
+		action="uploadAction.do"
+		enctype="multipart/form-data" >
+		
+	<table class="table table-bordered" style="width:500px;">
+		<colgroup>
+			<col width="20%" />
+			<col width="*" />			
+		</colgroup>
+		<tr>
+			<th>제목</th>
+			<td>
+				<input type="text" name="title" 
+					placeholder="제목입니다." />
+			</td>			
+		</tr>
+		<tr>
+			<th>첨부파일1</th>
+			<td>
+				<input type="file"  name="userfile1" />
+			</td>			
+		</tr>
+		<tr>
+			<th>첨부파일2</th>
+			<td>
+				<input type="file" name="userfile2" />
+			</td>			
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;">
+				<button type="submit" class="btn btn-danger">파일업로드</button>
+			</td>			
+		</tr>
+	</table>
+	</form>
 	
-	
-	<!--
-	@ModelAttribute 어노테이션을 통해 커맨드객체의 이름을 mInfo로 
-	변경했으므로 아래와 같이 출력한다.  
-	-->
-	<ul>
-		<li>아이디 : ${mInfo.id }</li>
-		<li>패스원드 : ${mInfo.pw }</li>
-		<li>이름 : ${mInfo.name }</li>
-	</ul>
 </div>
 </body>
 </html>
