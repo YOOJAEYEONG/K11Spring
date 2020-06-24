@@ -10,8 +10,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,14 +31,16 @@ public class FileuploadController {
 	public void uploadPath(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
 		String path = req.getSession().getServletContext().getRealPath("/resources/upload");
+		//위의 한줄을 풀어쓰면 아래와 같다.
+		HttpSession session = req.getSession();
+		ServletContext ctx = session.getServletContext();
+		String path2 = ctx.getRealPath("/resources/upload");
 		
-		resp.setContentType("text/html charset=utf-8");
+		resp.setContentType("text/html; charset=utf-8");
 		
 		PrintWriter pw = resp.getWriter();
 		pw.print("/uplead 디렉토리의 물리적 경로: ");
 		pw.print(path);
-		
-		
 	}
 	
 	
