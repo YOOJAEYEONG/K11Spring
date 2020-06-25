@@ -50,7 +50,7 @@ public class EnvironmentController {
 			String envPath = "classpath:EnvAdmin.properties";			
 			propertySources.addLast(new ResourcePropertySource(envPath));
 			
-			//[5]파일의 내용을 읽어 번수에 저장함
+			//[5]파일의 내용을 읽어 변수에 저장함
 			adminIdStr = env.getProperty("admin.id");
 			adminPwStr = env.getProperty("admin.pw");
 			
