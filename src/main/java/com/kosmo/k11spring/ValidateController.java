@@ -22,12 +22,18 @@ public class ValidateController {
 	//회원가입 페이지의 폼값을 전송받아 검증하는 메소드
 	@RequestMapping("/validate/registProc")
 	public String registProc(
+			/*
+			 * @ModelAttribute => memberDTO Bean객체를 mInfo이름으로 model객체에 저장한다.
+			 * 추가내용은 원노트에 적어놓았다.
+			 */
+			
 			@ModelAttribute("mInfo") MemberDTO memberDTO,
 			BindingResult result,
 			Model model
 			) {
 		/*
-		BindingResult 객체 : validator를 통해  폼값을 검증한 후 해당 결과를 전송받을 객체.
+		BindingResult 객체 : validator를 통해  폼값을 검증한 후 
+			해당 결과를 전송받을 객체.
 			폼값에 문제가 있다면 해당 객체를 통해 확인 할 수 있다.
 		*/
 		

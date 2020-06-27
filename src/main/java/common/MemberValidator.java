@@ -13,10 +13,10 @@ Validator
 public class MemberValidator implements Validator{
 
 	/*
-	supports() 메소드
-		: 매개변수로 전달되는 객체가 유효성 검증을 지원할 수 있는 커맨드객체인지 여부를 판단한다.
-		만약 해당 메소드를 통과하지 못하면 유효성 검증을 진행하는 validate()메소드는
-		호출되지 않는다. 호출하는 부분이 없지만 자동 호출된다.
+	supports() 메소드 (호출하는 부분이 없지만 자동 호출된다.)
+		: 매개변수로 전달되는 객체가 유효성 검증을 지원할 수 있는 커맨드객체인지 
+		검사한다.만약 해당 메소드를 통과하지 못하면 유효성 검증을 진행하는 
+		validate()메소드는 호출되지 않는다. 
 	*/
 	@Override
 	public boolean supports(Class<?> clazz) {
