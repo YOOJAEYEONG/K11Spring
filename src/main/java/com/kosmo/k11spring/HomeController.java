@@ -32,7 +32,8 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		//스프링에서는 application, page, request, session 영역외에 model영역이 하나더 있다.
+		//스프링에서는 application, page, request, session 
+		//영역외에 model영역이 하나더 있다.
 		model.addAttribute("serverTime", formattedDate );
 		
 		return "home";

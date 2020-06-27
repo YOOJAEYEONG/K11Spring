@@ -76,8 +76,10 @@ public class RequestMappingControllor {
 	
 	/*
 	@ModelAttribute 어노테이션
-		: 부로 전달되는 커맨드객체의 이름을 임의로 설정하고 변겨아고 싶을때 사용한다.
-		아래 코드는 studentDTO -> si 로 이름을 변경한 후 view로 데이터를 전달한다.
+		: 부로 전달되는 커맨드객체의 이름을 임의로 설정하고 
+		변경하고 싶을때 사용한다.
+		아래 코드는 studentDTO -> si 로 
+		이름을 변경한 후 view로 데이터를 전달한다.
 	 */
 	@RequestMapping("/requestMapping/modelAttribute")
 	public String studentInfo(

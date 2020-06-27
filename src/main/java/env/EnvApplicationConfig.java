@@ -17,17 +17,13 @@ public class EnvApplicationConfig {
 	
 	
 	/*
-	@Value
-		: 멤버변수 초기값을 어노테이션으로 정의한다.
-	
-	
+	@Value : 멤버변수 초기값을 어노테이션으로 정의한다.
 	*/
 	@Value("${board1.user}")
 	private String board_user;
 	
 	@Value("${board1.pass}")
 	private String board_pass;
-	
 	
 	@Value("${board2.driver}")
 	private String board_driver;

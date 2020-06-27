@@ -47,7 +47,7 @@ public class DIController {
 		xml설정파일에서 생성한 빈(bean)을 getBean()을 통해 주입받아 참조변수에 할당한다.
 		new 연산자를 통해 생성한것과 동일하지만 외부 설정파일에서
 		미리 생성한것을 주입(Injection)받은것임에 유의 할것.
-		getBean(String name, Class<?>)
+		
 		*/
 		CalculatorDTO myCal = 
 				ctx.getBean("myCal", CalculatorDTO.class);
@@ -75,6 +75,7 @@ public class DIController {
 		
 		//위에서 생성된 객체를 통해 Bean을 주입받는다.
 		/*
+		getBean(String name, Class<?>)
 		사용법 : getBean("빈의 참조변수명", 빈생성시 사용된 클래스명.class);
 		*/
 		BMIInfoView myInfo = 
@@ -139,11 +140,6 @@ public class DIController {
 	@RequestMapping("/di/myAnnotation")
 	public ModelAndView myAnnotation() {
 		
-		
-		
-		/*
-		
-		 */
 		//빈을 생성할 JAVA파일을 가져와서 스프링 컨테이너를 생성함
 		AnnotationConfigApplicationContext aCtx = 
 				new AnnotationConfigApplicationContext(
@@ -157,8 +153,8 @@ public class DIController {
 		str1 += "몸무게:"+mem1.getWeight()+"<br>";
 		str1 += "BMI결과:"+mem1.bmiCalculation(); 
 		/*
-		xml파일을통해서 객체를 생성하는 것이 아니라 어노테이션을 통해서 생성했기 때문에 
-		해당 클래스로 들어가보면...
+		xml파일을통해서 객체를 생성하는 것이 아니라 어노테이션을 
+		통해서 생성했기 때문에 해당 클래스로 들어가보면...
 		*/
 		
 		BMIInfoView mem2 = aCtx.getBean("member2", BMIInfoView.class);

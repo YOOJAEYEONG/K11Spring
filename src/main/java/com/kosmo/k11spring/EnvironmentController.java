@@ -70,6 +70,7 @@ public class EnvironmentController {
 		:XML 설정파일에서 프로퍼티 파일을 명시한 후 
 		직접 빈을 생성하여 읽어오는 방법
 	*** /K11Spring/src/main/resources/EnvAppCtx.xml 파일을 생성함
+		EnvAppCtx.xml파일 생성시 beans, context 체크해서 생성
 	 */
 	@RequestMapping("/environment/main2")
 	public String main2(Model model) {
