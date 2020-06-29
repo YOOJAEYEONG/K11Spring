@@ -45,7 +45,7 @@ public class EnvApplicationConfig {
 		//1.프로퍼티 파일을 읽어오기위한 객체생성
 		PropertySourcesPlaceholderConfigurer config = 
 				new PropertySourcesPlaceholderConfigurer();
-		
+		System.out.println("EnvApplicationConfig>Properties() 호출됨");
 		
 		//2.프로퍼티 파일의 위치를 설정하기위한 Resource타입의 객체배열 생성
 		Resource[] locations = new Resource[2];
@@ -70,7 +70,7 @@ public class EnvApplicationConfig {
 	*/
 	@Bean
 	public BoardConnection boardConfig() {
-		System.out.println("board_driver:   "+board_driver);
+		System.out.println("EnvApplicationConfig > board_driver:   "+board_driver);
 		//DTO객체를 생성하고 setter()를 통해 초기값을 설정함
 		BoardConnection bconn = new BoardConnection();
 		bconn.setUser(board_user);

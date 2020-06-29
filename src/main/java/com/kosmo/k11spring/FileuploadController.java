@@ -25,6 +25,24 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class FileuploadController {
+	
+	
+	/*
+	UUID(Universally Unique Identifier)
+		: 범용 고유 식별자. randomUUID() 메소드를 통해 문자열을 생성하면 
+		하이픈이 4개가 포함된 32의 랜덤하고 유니크한 문자열이 생성된다.
+		***JDK에서 기본적으로 제공되는 클래스임
+	 */
+	public static String getUuid() {
+		String uuid = UUID.randomUUID().toString();
+		System.out.println("생성된UUID: "+uuid);
+		uuid=uuid.replace("-", "");
+		return uuid;
+	}
+	
+	
+	
+	
 
 	//서버의 물리적 경로 확인하기
 	@RequestMapping("/fileUpload/uploadPath.do")
@@ -103,7 +121,11 @@ public class FileuploadController {
 				String originalName = 
 						new String(mfile.getOriginalFilename().getBytes(),"UTF-8");
 				
-				//서버로 전송된 파일이 없는경우
+				/*
+				view에 파일 업로드 폼이 2개 만들어 놨기 때문에 
+				2번 반복 될 것인데 서버로 전송된 파일이 없는경우
+				다음 파일폼값을 처리하기 위해 continue 처리한다. 
+				 */
 				if("".equals(originalName)) {
 					continue;
 				}
@@ -144,18 +166,6 @@ public class FileuploadController {
 	}
 	
 	
-	/*
-	UUID(Universally Unique Identifier)
-		: 범용 고유 식별자. randomUUID() 메소드를 통해 문자열을 생성하면 
-		하이픈이 4개가 포함된 32의 랜덤하고 유니크한 문자열이 생성된다.
-		***JDK에서 기본적으로 제공되는 클래스임
-	 */
-	public static String getUuid() {
-		String uuid = UUID.randomUUID().toString();
-		System.out.println("생성된UUID: "+uuid);
-		uuid=uuid.replace("-", "");
-		return uuid;
-	}
 	
 	
 	//파일목록보기

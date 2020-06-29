@@ -104,6 +104,8 @@ public class EnvironmentController {
 				new AnnotationConfigApplicationContext(
 						EnvApplicationConfig.class);
 		
+		
+		
 		//설정파일에서 생성한 빈을 주입받음
 		BoardConnection bConn = 
 				ctx.getBean("boardConfig", BoardConnection.class);
