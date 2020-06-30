@@ -13,26 +13,30 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 public class TicketDAO {
 
-	//스프링 JDBC를 사용하기위한 멤버변수와;
+	/*
+	아래 2개의 멤버변수는 servlet-context.xml에서 
+	TransactionDAO 빈을 생성할때 초기화 된다.
+	*/
+	//스프링 JDBC를 사용하기위한 멤버변수
 	JdbcTemplate template;
+	//트랜잭션 처리를 위한 멤버변수
+	PlatformTransactionManager transactionManager;
+	
+	
+	
 	public void setTemplate(JdbcTemplate template) {
 		this.template = template;
 	}
-	
-	//트랜잭션 처리를 위한 멤버변수
-	PlatformTransactionManager transactionManager;
 	public void setTransactionManager(
 			PlatformTransactionManager transactionManager) {
 		this.transactionManager = transactionManager;
 	}
-	/*
-	위 2개의 멤버변수는 servlet-context.xml에서 
-	TransactionDAO 빈을 생성할때 초기화 된다.
-	*/
+	
 	
 	public TicketDAO() {
 		System.out.println("TicketDAO생성자호출"+template);
 	}
+	
 	
 	//티켓구매와 결제를 위한 메소드
 	public void buyTicket(final TicketDTO dto) {
@@ -84,8 +88,6 @@ public class TicketDAO {
 					return psmt;
 				}
 			});
-			
-			
 			
 			//티켓 구매갯수가 5이하인 경우 정상처리되어 모든 작업이 commit된다.
 			System.out.println("카드결제와 티켓 구매 모두 정상처리되었습니다.");

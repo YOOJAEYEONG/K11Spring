@@ -4,6 +4,9 @@ public class TicketDTO {
 
 	private String customerId;
 	private int amount;
+	
+	
+	
 	public String getCustomerId() {
 		return customerId;
 	}
