@@ -135,6 +135,21 @@
 		
 		
 		
+		<!--ojdbc6(오라클드라이버)의존설정  -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency>
+		<!--spring jdbc(JDBCTemplate)를 사용하기위한 의존설정  -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.1.4.RELEASE</version>
+		</dependency>
+		
+		
+		
 		
 		
 		

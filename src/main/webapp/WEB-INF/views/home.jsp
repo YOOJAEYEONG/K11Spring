@@ -11,8 +11,6 @@
 </head>
 <body>
 <div class="container">
-	
-
 	<h2>스프링 MVC시작하기</h2>
 	<h3>resources 폴더 사용하기 </h3>
 	<!--Spring MVC에서는 이와 같은 리소스를 사용하기위해
@@ -33,27 +31,21 @@
 	<h3>첫번째 컨트롤러 만들기</h3>
 	<!--Step1 : 효청명을 결정한다.  -->
 	<ul>
-		<li>
-			<a href="./home/helloSpring" target="_blank">
+		<li><a href="./home/helloSpring" target="_blank">
 			첫번째 컨트롤러 바로가기
-			</a>
-		</li>
+			</a></li>
 	
 	<!--컨트롤러 : FormControllor.java  --> 
 	<h3>form값 차리하기</h3>
-	<li>
-		<a href="./form/servletRequest?id=kosmo&pw=1234" target="_blank">
+	<li><a href="./form/servletRequest?id=kosmo&pw=1234" target="_blank">
 		HttpServletRequest로 폼값받기
-		</a>
-	</li>
+		</a></li>
 	
 	
 	<!--파라미터가 많다고 가정하고 파라미터들을 한꺼번에 저장하고 받아보자  -->
-	<li>
-		<a href="./form/requestParam.do?id=kosmo&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
+	<li><a href="./form/requestParam.do?id=kosmo&pw=1234&name=홍길동&email=hong@gildong.com" target="_blank">
 		@requestParam 어노테이션으로 폼값받기
-		</a>
-	</li>
+		</a></li>
 	
 
 	
@@ -80,9 +72,7 @@
 	
 	<!--컨트롤러 : ValidateController.java  -->
 	<h2>폼 데이터 검증하기 - Validator</h2>
-	<li>
-		<a href="validate/memberRegist.do" target="_blank">회원가입</a>
-	</li>
+	<li><a href="validate/memberRegist.do" target="_blank">회원가입</a></li>
 	
 	
 	
@@ -104,11 +94,8 @@
 	<!-- 컨트롤러: DIController.java -->
 	<h3>DI(Dependency Injection)  의존성주입</h3>
 	<li><a href="di/myCalculator" target="_blank">간단한 사칙연산 계산기</a></li>
-
 	<li><a href="di/myBMICal" target="_blank">BMI(비만지수) 계산하기</a></li>
-	
 	<li><a href="di/myAvengers" target="_blank">어벤저스 히어로</a></li>
-	
 	<li><a href="di/myAnnotation" target="_blank">어노테이션을 이용한 DI 활용</a></li>
 	
 	
@@ -174,17 +161,39 @@
 		응답헤더와 스트림을 통해 파일을 다운로드 하기위한 로직으로 구성된다.
 	-->
 	<h3>파일업로드</h3>
-	<li>
-		<a href="./fileUpload/uploadPath.do" target="_blank">
-			upload폴더의 물리적 경로 확인하기
-		</a>
-	</li>
+	<li><a href="./fileUpload/uploadPath.do" target="_blank">upload폴더의 물리적 경로 확인하기</a></li>
 	<li><a href="./fileUpload/uploadForm.do" target="_blank">파일업로드폼</a></li>
 	<li><a href="./fileUpload/uploadList.do" target="_blank">파일목록보기</a></li>
-	
-
-	
+	<hr />
+	<!--컨트롤러: TransactionController  -->
+	<h3>트랜잭션(Transaction)</h3>
+	<!--  
+	트랜잭션의 개념
+	-인터넷 뱅킹의 경우 A가 B에게 송금하는 경우 A에서는 출금되었으나
+		B에게는 입금이 되지 않은 상황이 발생된다면 해당 거래는 취소되어야한다.
+	-이와 같이 양쪽 모두 만족되어야 하나의 프로세스를 완료처리 할 수 있도록
+		해주는 기법을 트랜잭션이라고 한다.
+	-즉 2개 이상의 쿼리를 하나의 커넥션으로 묶어 DB에 전송하고 이과정에서
+		에러가 발생하는 경우 양쪽 모두를 원래의 상태로 되돌려 놓는다.
+	절차)
+	1.트랜잭션 매니저를 사용하는 경우
+		1-1. 오라클 드라이버, SPRING-JDBC에 대한 의존설정을 한다.
+		1-2. servlet-contemt.xml에서 빈을 생성한다.
+		1-3. TicketDAO의 빈을 컨트롤러에서 자동 주입받아 사용한다.
+		1-4. 2개 이상의 작업을 try~catch로 묶어 하나라도 에러가 발생하는경우 
+			모든작업을 rollback시킨다. 모든작업이 정상처리 되었다면 commit시킨다.
+	-->
+	<li><a href="transaction/buyTicketMain.do" target="_blank">티켓구매하기</a></li>
 	</ul>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<br /><br />
 </div>
 </body>
