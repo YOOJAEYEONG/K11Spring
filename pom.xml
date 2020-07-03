@@ -150,7 +150,12 @@
 		
 		
 		
-		
+		<!-- JSON을 사용하기 위한 의존설정 -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.5.1</version>
+		</dependency>
 		
 		
 		

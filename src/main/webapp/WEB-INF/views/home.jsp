@@ -65,11 +65,7 @@
 	<h3>@RequestMapping 어노테이션 활용</h3>
 	<li><a href="./requestMapping/index.do" target="_blank">
 		requestMapping 시작페이지 바로가기</a></li>
-	
-	
 	<hr />
-	
-	
 	<!--컨트롤러 : ValidateController.java  -->
 	<h2>폼 데이터 검증하기 - Validator</h2>
 	<li><a href="validate/memberRegist.do" target="_blank">회원가입</a></li>
@@ -99,8 +95,6 @@
 	<li><a href="di/myAnnotation" target="_blank">어노테이션을 이용한 DI 활용</a></li>
 	
 	
-	
-	
 	<hr />
 	<!--  
 	[Environment 객체를 이용한 외부파일 참조 절차]
@@ -113,7 +107,6 @@
 		4-3) PropertySources 가져옴
 		4-4) 외부파일을 가져와서 addLast()로 추가후 내용읽음
 		4-5) 읽은 내용을 Model에 저장하거나 비즈니스 로직에 직접 사용함
-	
 	-->
 	<!--컨트롤러:EnvironmentController  -->
 	<h3>Environment객체를 이용한 외부파일 참조하기</h3>
@@ -121,11 +114,7 @@
 	<li><a href="environment/main2" target="_blank">외부파일 참조하기 2(XML설정파일 사용)</a></li>
 	<li><a href="environment/main3" target="_blank">외부파일 참조하기 3(어노테이션 사용)</a></li>
 
-
-	
 	<hr />
-	
-	
 	
 	<!--  
 	[파일업로드 & 다운로드 절차]
@@ -190,6 +179,27 @@
 			모든작업을 rollback시킨다. 모든작업이 정상처리 되었다면 commit시킨다.
 	-->
 	<li><a href="transaction/buyTicketMain.do" target="_blank">티켓구매하기</a></li>
+	
+	<li><a href="transaction/buyTicketTpl.do" target="_blank">티켓구매하기2</a></li>
+	
+	<h2>JSON사용하기(RestAPI)</h2>
+	<li><a href="./jsonUse/jsonView.do" tabindex="_blank">@ResponseBody 어노테이션을 이용한 JSON데이터 보기</a></li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	</ul>
 	
 	
