@@ -9,6 +9,7 @@
 		멤버변수를 초기화 한다.(arg:argue)
 	2.1번과 동일하지만 value속성을 이용해서 초기화 한다.
 -->
+
 <bean id="hero1" class="di.AvengersVO">
 	<constructor-arg>
 		<value>스티븐 그랜트 로져스</value>
